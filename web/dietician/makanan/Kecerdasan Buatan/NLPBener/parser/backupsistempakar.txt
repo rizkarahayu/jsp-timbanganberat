@@ -1,0 +1,293 @@
+#include <stdio.h>
+#include <string.h>
+
+struct gejalafisik
+{
+     int id;
+     char nama[30];
+     float persentase;
+};
+
+struct gejalakronis
+{
+     int id;
+     char nama[30];
+     float persentase;
+     struct gejalafisik subgejala;
+};
+
+struct penyakit
+{
+     int id;
+     char nama[30];
+     struct gejalakronis gejala;
+};
+
+char jwb[2];
+
+
+void inisialgejalafisik(){
+     int i;
+     struct gejalafisik fisik[20];
+
+     fisik[0].id=1;
+     strcpy(fisik[0].nama, "Buang air besar (> 2 kali)");
+     fisik[0].persentase = 86.5;
+
+     fisik[1].id=2;
+     strcpy(fisik[1].nama, "Berak encer");
+     fisik[1].persentase = 90.5;
+
+     // 3rd gejala fisik
+     fisik[2].id=3;
+     strcpy(fisik[2].nama, "Berak berdarah");
+     fisik[2].persentase = 81.5;
+
+     // 4 gejala fisik
+     fisik[3].id=4;
+     strcpy(fisik[3].nama, "Lesu dan tidak bergairah");
+     fisik[3].persentase = 81.5;
+
+     // 5 gejala fisik
+     fisik[4].id=5;
+     strcpy(fisik[5].nama, "Tidak selera makan");
+     fisik[4].persentase = 81.5;
+
+     // 6 gejala fisik
+     fisik[5].id=6;
+     strcpy(fisik[5].nama, "Merasa mual dan sering muntah (lebih dari 1 kali)");
+     fisik[5].persentase = 81.5;
+
+     // 7 gejala fisik
+     fisik[6].id=7;
+     strcpy(fisik[6].nama, "Merasa sakit di bagian perut");
+     fisik[6].persentase = 81.5;
+
+     // 8 gejala fisik
+     fisik[7].id=8;
+     strcpy(fisik[7].nama, "Tekanan darah rendah");
+     fisik[7].persentase = 81.5;
+
+     // 9 gejala fisik
+     fisik[8].id=9;
+     strcpy(fisik[8].nama, "Pusing");
+     fisik[8].persentase = 81.5;
+
+     // 10 gejala fisik
+     fisik[9].id=10;
+     strcpy(fisik[9].nama, "Pingsan");
+     fisik[9].persentase = 81.5;
+
+     // 11 gejala fisik
+     fisik[10].id=11;
+     strcpy(fisik[10].nama, "Suhu badan tinggi");
+     fisik[10].persentase = 81.5;
+
+     // 12 gejala fisik
+     fisik[11].id=12;
+     strcpy(fisik[11].nama, "Luka di bagian tertentu");
+     fisik[11].persentase = 81.5;
+
+     // 13 gejala fisik
+     fisik[12].id=13;
+     strcpy(fisik[12].nama, "Tidak dapat menggerakkan anggota badan tertentu");
+     fisik[12].persentase = 81.5;
+
+     // 14 gejala fisik
+     fisik[13].id=14;
+     strcpy(fisik[13].nama, "Memakan sesuatu");
+     fisik[13].persentase = 81.5;
+
+     // 15 gejala fisik
+     fisik[14].id=15;
+     strcpy(fisik[14].nama, "Memakan daging");
+     fisik[14].persentase = 81.5;
+
+     // 16 gejala fisik
+     fisik[15].id=16;
+     strcpy(fisik[15].nama, "Memakan jamur");
+     fisik[15].persentase = 81.5;
+
+     // 17 gejala fisik
+     fisik[16].id=17;
+     strcpy(fisik[16].nama, "Memakan makanan kaleng");
+     fisik[16].persentase = 81.5;
+
+     // 18 gejala fisik
+     fisik[17].id=18;
+     strcpy(fisik[17].nama, "Membeli susu");
+     fisik[17].persentase = 81.5;
+
+     // 19 gejala fisik
+     fisik[18].id=19;
+     strcpy(fisik[18].nama, "Meminum susu");
+     fisik[18].persentase = 81.5;
+
+     for(i=0; i<3; i++)
+     {
+         printf("     fisiks of STUDENT : %d \n", i+1);
+         printf(" Id is: %d \n", fisik[i].id);
+         printf(" nama is: %s \n", fisik[i].nama);
+         printf(" persentase is: %f\n\n",fisik[i].persentase);
+     }
+     return 0;
+}
+
+void inisialgejalakronis(){
+     int i;
+     struct gejalakronis klinis[20];
+
+     klinis[0].id=1;
+     strcpy(klinis[0].nama, "Mencret");
+     klinis[0].fisik[0].id=1;
+
+
+
+
+     klinis[1].id=2;
+     strcpy(klinis[1].nama, "Muntah");
+     klinis[1].persentase = 90.5;
+
+     // 3rd gejala klinis
+     klinis[2].id=3;
+     strcpy(klinis[2].nama, "Sakit perut");
+     klinis[2].persentase = 81.5;
+
+     // 4 gejala klinis
+     klinis[3].id=4;
+     strcpy(klinis[3].nama, "Darah rendah");
+     klinis[3].persentase = 81.5;
+
+     // 5 gejala klinis
+     klinis[4].id=5;
+     strcpy(klinis[5].nama, "Tidak selera makan");
+     klinis[4].persentase = 81.5;
+
+     // 6 gejala klinis
+     klinis[5].id=6;
+     strcpy(klinis[5].nama, "Koma");
+     klinis[5].persentase = 81.5;
+
+     // 7 gejala klinis
+     klinis[6].id=7;
+     strcpy(klinis[6].nama, "Demam");
+     klinis[6].persentase = 81.5;
+
+     // 8 gejala klinis
+     klinis[7].id=8;
+     strcpy(klinis[7].nama, "Septicaemia");
+     klinis[7].persentase = 81.5;
+
+     // 9 gejala klinis
+     klinis[8].id=9;
+     strcpy(klinis[8].nama, "Lumpuh");
+     klinis[8].persentase = 81.5;
+
+     // 10 gejala klinis
+     klinis[9].id=10;
+     strcpy(klinis[9].nama, "Mencret berdarah");
+     klinis[9].persentase = 81.5;
+
+     // 11 gejala klinis
+     klinis[10].id=11;
+     strcpy(klinis[10].nama, "Makan daging");
+     klinis[10].persentase = 81.5;
+
+     // 12 gejala klinis
+     klinis[11].id=12;
+     strcpy(klinis[11].nama, "Makan jamur");
+     klinis[11].persentase = 81.5;
+
+     // 13 gejala klinis
+     klinis[12].id=13;
+     strcpy(klinis[12].nama, "Makan makanan kaleng");
+     klinis[12].persentase = 81.5;
+
+     // 14 gejala klinis
+     klinis[13].id=14;
+     strcpy(klinis[13].nama, "Minum susu");
+     klinis[13].persentase = 81.5;
+
+     for(i=0; i<3; i++)
+     {
+         printf("     kliniss of STUDENT : %d \n", i+1);
+         printf(" Id is: %d \n", klinis[i].id);
+         printf(" nama is: %s \n", klinis[i].nama);
+         printf(" persentase is: %f\n\n",klinis[i].persentase);
+     }
+     return 0;
+
+}
+
+void inisialpenyakit(){
+     struct penyakit jenis[20];
+    // 15 gejala penyakit
+     penyakit[0].id=1;
+     strcpy(penyakit[0].nama, "Keracunan Staphylococcus aureus");
+     penyakit[0].persentase = 82;
+
+     // 16 gejala penyakit
+     penyakit[1].id=2;
+     strcpy(penyakit[1].nama, "Keracunan jamur beracun");
+     penyakit[1].persentase = 82;
+
+     // 17 gejala penyakit
+     penyakit[2].id=3;
+     strcpy(penyakit[2].nama, "Keracunan Salmonellae");
+     penyakit[2].persentase = 82;
+
+     // 18 gejala penyakit
+     penyakit[3].id=4;
+     strcpy(penyakit[3].nama, "Keracunan Clostridium botulinum");
+     penyakit[3].persentase = 82;
+
+     // 19 gejala penyakit
+     penyakit[4].id=5;
+     strcpy(penyakit[4].nama, "Keracunan Campylobacter");
+     penyakit[4].persentase = 82;
+
+}
+
+void uji(){
+
+}
+
+void pertanyaan()
+{
+    printf("---0[ Daftar Gejala Penyakit Gastrousus ]0---\n\n");
+    printf("1=> Apakah anda sering mengalami buang air besar (lebih dari 2 kali)?\n");
+    printf("2=> Apakah anda mengalami berak encer?\n");
+	printf("3=> Apakah anda mengalami berak berdarah?\n");
+	printf("4=> Apakah anda merasa lesu dan tidak bergairah?\n");
+    printf("5=> Apakah anda tidak selera makan?\n");
+    printf("6=> Apakah anda merasa mual dan sering muntah (lebih dari 1 kali) ?\n");
+	printf("7=> Apakah anda merasa sakit di bagian perut ?\n");
+	printf("8=> Apakah tekanan darah anda rendah ?\n");
+	printf("9=> Apakah anda merasa pusing ?\n");
+	printf("10=> Apakah anda mengalami pingsan ?\n");
+	printf("11=> Apakah suhu badan anda tinggi ?\n");
+	printf("12=> Apakah anda mengalami luka di bagian tertentu ?\n");
+	printf("13=> Apakah anda tidak dapat menggerakkan anggota badan tertentu ?\n");
+	printf("14=> Apakah anda pernah memakan sesuatu ?\n");
+    printf("15=> Apakah anda memakan daging ?\n");
+	printf("16=> Apakah anda memakan jamur ?\n");
+	printf("17=> Apakah anda memakan makanan kaleng ?\n");
+	printf("18=> Apakah anda membeli susu ?\n");
+    printf("19=> Apakah anda meminum susu ?\n");
+
+
+}
+
+main()
+{
+    //clrscr();
+    //pertanyaan();
+    printf("\nInput gejala : ");
+    scanf("%s",&jwb);
+    strupr(jwb);
+    //inisialgejalafisik();
+    //inisialgejalaklinis();
+    //uji();
+    getch();
+    return (0);
+}

@@ -1,0 +1,23 @@
+katabenda(N):-
+	member(N,[aku, kamu]).
+
+katakerja(V) :-
+	member(V,[makan, minum]).
+
+obyek(O):-
+	member(O,[krupuk,tahu]).
+
+frasekatakerja(VP):-
+	katakerja(V),
+	obyek(O),
+	append(V,O,VP).
+
+frasekatakerja(VP):-
+	katakerja(VP).
+
+sentence(S) :-
+	katabenda(N),
+	frasekatakerja(VP),
+	append(N,VP,S).
+
+

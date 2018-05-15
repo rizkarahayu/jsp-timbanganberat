@@ -1,0 +1,8 @@
+katabenda(N) :- member(N,[aku, kamu]).
+
+katakerja(V) :- member(V,[makan, minum, pergi]).
+
+sentence(S) :-
+	katabenda(N),
+	katakerja(V),
+	append(N,V,S).

@@ -1,0 +1,14 @@
+subyek(S) :- member(S,[aku, kamu]).
+
+frasekatakerja(V) :- member(V,[makan, minum]).
+
+frasepelengkap(P) :- member(P,[baik, jahat]).
+
+fraseketerangan(K) :- member(K,[dirumah, disana]).
+
+
+sentence(ST) :- subyek(S), frasekatakerja(V), append(S,V,ST).
+sentence(ST) :- subyek(S), frasepelengkap(P), append(S,P,ST).
+sentence(ST) :- subyek(S), fraseketerangan(K), append(S,K,ST).
+
+

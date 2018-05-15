@@ -1,0 +1,24 @@
+noun([N], katabenda(N)) :-
+	member(N,[saya, aku, kamu, dia, aba, aba-aba, abah, abdomen, aborsi, abrasi, absensi, abu, abu-abu, adaptasi, adaptor, adat, adhesi, adik, adipati, aditokoh, adiwangsa, adjektif,
+		  adjektiva, administrasi, administrator, advokasi, aerasi, aerob, aerobatik, aerobika, aerodinamika, aerosol, agenda, agregasi, agregat, aglomerasi, aglutinin, agraris, 
+		  agrobisnis, agroekonomi, agroindustri, agrowisata, agung, agustus, Ahad, ahli, air, ajar, aji-aji, akad, akademi, akademisi, akal, akar, akhir, akhirat, akhlak, akibat,
+ 		  akidah, akrab, akreditasi, akronim, aksara, akselerasi, akses, aksesori, aksi, aktivis, aktivitas, aktor, akuarium, akun, akuntan, akuntansi, akur, alam, alarm, alas,
+		  alat
+
+
+
+
+
+]).
+
+
+verb([V], katakerja(V)) :-
+	member(V,[makan, minum]).
+
+sentence(S, kalimat(NPTree,VPTree) ) :-
+	append(N,V,S),
+	noun(N, NPTree),
+	verb(V, VPTree).
+	
+
+
